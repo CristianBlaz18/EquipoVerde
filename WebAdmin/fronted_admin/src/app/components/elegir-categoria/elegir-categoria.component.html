@@ -1,0 +1,73 @@
+<section class="vh-100">
+    <div class="container-fluid">
+      <div  >
+        <div class="col-lg-4 "class="form_categoria">
+            <div   class="border">
+              <div >
+                <h4  class="titulo">Nueva Categoria</h4>
+              </div>
+              
+              <form [formGroup]="categoria_form" (ngSubmit)="registrar_categoria()"
+              >
+                
+                <p class="text_cat">Nombre de Categoría: </p>
+                <div >
+                  <input  type="text"  id="nombre_categ" class="form-control  "
+                    placeholder="Buscar..." formControlName="nombre_categ"class="input_cat"/>
+                  
+                  <div class="text-danger"
+                    *ngIf="categoria_form.get('nombre_categ')?.hasError('required') && categoria_form.get('nombre_categ')?.touched ">       
+                    <span >El usuario <strong>es obligatorio</strong></span>
+                  </div>
+                </div>
+                
+                <p class="text_cat">Imagen de Categoría: </p>
+                <div class="caja" >
+                    <div class="image-upload">
+                        <label for="file-input">
+                          <img src="assets/img/logo_uc_login.png" alt="Previsualización de imagen">
+                        </label>
+                      
+                        <input id="file-input" type="file">
+                      </div>
+                </div>
+                <p class="text_cat">Descripcion de Categoría: </p>
+                <div class="form-outline mb-4 ">
+                    <textarea class="cuadro-texto"></textarea>
+                  <div class="text-danger"
+                  *ngIf="categoria_form.get('password')?.hasError('required')&& categoria_form.get('password')?.touched ">       
+                    <span font-="">La contraseña <strong>es obligatorio</strong></span>
+                  </div>
+                </div>
+                <p class="text_cat_1">Inicio de Ciclo: </p>
+                <div >
+                  <input  type="number" id="password" class="form-control" 
+                  formControlName="password"class="input_cat_1"/>
+                  <div class="text-danger"
+                  *ngIf="categoria_form.get('password')?.hasError('required')&& categoria_form.get('password')?.touched ">       
+                    <span font-="">La contraseña <strong>es obligatorio</strong></span>
+                  </div>
+                </div>
+
+                <p class="text_cat_1">Fin de Ciclo: </p>
+                <div >
+                  <input  type="number" id="password" class="form-control" 
+                   formControlName="password"class="input_cat_1"/>
+                  <div class="text-danger"
+                  *ngIf="categoria_form.get('password')?.hasError('required')&& categoria_form.get('password')?.touched ">       
+                    <span font-="">La contraseña <strong>es obligatorio</strong></span>
+                  </div>
+                </div>
+                <div >
+            
+                  <button type="submit" class="boton">
+                
+                    Agregar</button >
+                    
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

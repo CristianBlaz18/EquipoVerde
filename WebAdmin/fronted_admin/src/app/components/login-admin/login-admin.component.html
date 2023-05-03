@@ -1,0 +1,58 @@
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      
+      <div  class ="logo px-0">
+        <img class="log_imagen"src="assets/img/portada_login.png"  
+          alt="Login image" >
+      </div>
+      <div class="col-sm-1 px-0 ">
+       
+      </div>
+      <div class="col-lg-4 ">
+        <div class="card-body p-md-3 mx-md-4">
+
+          <div class="text-center">
+            <img src="assets/img/logo_uc_login.png"
+              style="width: 300px;" alt="logo">
+            <h4 class="mt-1 mb-5 pb-1">Iniciar Sesion</h4>
+          </div>
+
+          <form [formGroup]="user_form" (ngSubmit)="validar_usuario()">
+            <p>Ingresa su usuario</p>
+
+            <div class="form-outline mb-3 text-green "
+            >
+              <input type="email" id="usario" class="form-control  "
+                placeholder="Usuario o Correo Electronico" formControlName="usuario"/>
+              
+              <div class="text-danger"
+                *ngIf="user_form.get('usuario')?.hasError('required') && user_form.get('usuario')?.touched ">       
+                <span font-="">El usuario <strong>es obligatorio</strong></span>
+              </div>
+            </div>
+            <p>Ingresa su usuario</p>
+            <div class="form-outline mb-4 ">
+              <input  type="password" id="password" class="form-control" 
+              placeholder="Contraseña" formControlName="password"/>
+              <div class="text-danger"
+              *ngIf="user_form.get('password')?.hasError('required')&& user_form.get('password')?.touched ">       
+                <span font-="">La contraseña <strong>es obligatorio</strong></span>
+              </div>
+            </div>
+
+            <div class="text-center pt-1 mb-5 pb-1">
+        
+              <button type="submit" class="btn btn-secondary btn-block  mb-3">
+            
+                Iniciar Sesión</button >
+                <div class="form-outline mb-1 text-center">
+                    <a class="text-muted " href="#!">Contacto con Administración</a>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
