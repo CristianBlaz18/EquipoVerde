@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ElegirCategoriaComponent } from './components/elegir-categoria/elegir-categoria.component';
 import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgregarCategoriaComponent } from './components/agregar-categoria/agregar-categoria.component';
 
 @NgModule({
  
   declarations: [
     AppComponent,
     ElegirCategoriaComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    AgregarCategoriaComponent
     
   ],
   imports: [

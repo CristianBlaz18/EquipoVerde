@@ -10,16 +10,31 @@
   margin-top: 0px;
   
 }
+.text-danger{
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  font-size: 9px;
+}
 .text_cat{
   margin-left: 50px;
   margin-top: 25px;
   font-size: 14px;
   
 }
+
 .text_cat_1{
   margin-left: 50px;
   margin-top:5px;
   font-size: 14px;
+  
+}
+.text_cat_2{
+  text-align: start;
+  margin-left: 50px;
+  padding: 0;
+  margin-top:5px;
+  font-size: 10px;
   
 }
 .titulo{
@@ -112,6 +127,9 @@
 }
 .boton:hover {
   background-color: #52BEFF;
+}
+label select {
+  max-width: 200px;
 }
   
 

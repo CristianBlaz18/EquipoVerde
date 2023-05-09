@@ -9,15 +9,18 @@
               
               <form [formGroup]="categoria_form" (ngSubmit)="registrar_categoria()"
               >
-                
-                <p class="text_cat">Nombre de Categoría: </p>
                 <div >
-                  <input  type="text"  id="nombre_categ" class="form-control  "
-                    placeholder="Buscar..." formControlName="nombre_categ"class="input_cat"/>
+                  <label class="text_cat_1"for="mi-select">Seleccivar nombre:
+                    <select id="mi-select" style="width: 200px; height: 30px;">
+                      <option value="opcion-1">Opción 1</option>
+                      <option value="opcion-2">Opción 2</option>
+                      <option value="opcion-3">Opción 3</option>
+                    </select>
+                  </label>
                   
-                  <div class="text-danger"
+                  <div class="text_cat_2"
                     *ngIf="categoria_form.get('nombre_categ')?.hasError('required') && categoria_form.get('nombre_categ')?.touched ">       
-                    <span >El usuario <strong>es obligatorio</strong></span>
+                    <span >El Nombre <strong>es obligatorio</strong></span>
                   </div>
                 </div>
                 
@@ -48,8 +51,7 @@
                     <span font-="">La contraseña <strong>es obligatorio</strong></span>
                   </div>
                 </div>
-
-                <p class="text_cat_1">Fin de Ciclo: </p>
+                <p class="text_cat_1">Fin de Ciclo:</p>
                 <div >
                   <input  type="number" id="password" class="form-control" 
                    formControlName="password"class="input_cat_1"/>
@@ -58,10 +60,8 @@
                     <span font-="">La contraseña <strong>es obligatorio</strong></span>
                   </div>
                 </div>
-                <div >
-            
-                  <button type="submit" class="boton">
-                
+                <div >            
+                  <button type="submit" class="boton" routerLink="">
                     Agregar</button >
                     
                 </div>
